@@ -43,6 +43,7 @@ padding: 8px 13px;
 .search form{
     border: 3px solid rgba(231, 230, 239, 1);
     border-radius:5px;
+    display: flex;
 }
 
 .header.active  {
@@ -51,7 +52,7 @@ padding: 8px 13px;
 }
 
 @media screen and ( max-width:1200px ) {
- .list,.search {
+ .list,.header .search {
     display : none;
  }  
  
@@ -65,19 +66,28 @@ padding: 8px 13px;
 .footer{
     background-color: rgba(238, 239, 251, 1);
     padding: 50px 0;
+
 }
+.footer .row {
+   gap: 30px; 
+}
+    
 .footer a ,.address-info {
   color: rgba(138, 143, 185, 1);  
 }
-.footer-item{
-    gap:45px
-}
+
 .right-side{
-width:60%;
+
+width: calc(( 100% - 30px  ) / 2 );
+
+
 }
 .left-side{
 gap: 35px;
 align-items: flex-start;
+width:50%;
+width: calc(( 100% - 30px  ) / 2 );
+
 }
 .d-flex{
     display: flex;
@@ -85,5 +95,30 @@ align-items: flex-start;
 .flex-direction{
     flex-direction: column;
 }
+
+ .right-side .row{
+    gap:35px;
+    align-items:flex-start;
+}
+
+.footer-item{
+    width:calc( (100% -   70px ) / 3);
+    gap:45px
+
+}
+@media screen and (max-width:992px) {
+  .right-side , .left-side {
+    width: 100%;
+  }  
+}
+@media screen and (max-width:576px) {
+    .footer{
+        text-align: center;
+    }
+  .footer-item {
+    width: 100%;
+  }  
+}
+
 
 /*e]nd footer*/
